@@ -1,0 +1,119 @@
+/* reset */
+* {
+   margin: 0;
+   padding: 0;
+   border: none;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   --red: #aa3230;
+   --blue: #294c71;
+   --white: #fff;
+
+   display: grid;
+   grid-template-areas:
+      "header"
+      "main"
+      "aside-interviews"
+      "aside-form"
+      "footer";
+   gap: 2rem;
+}
+
+img {
+   width: 100%;
+}
+
+/* header */
+#header {
+   grid-area: header;
+
+   background: url(../images/fundo.png) repeat-x bottom;
+}
+
+.container-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+
+   position: relative;
+   padding: 2rem;
+   margin-bottom: 6rem;
+}
+
+.logo {
+   width: 16rem;
+}
+
+.btn-mobile {
+   background-color: transparent;
+   font-size: 4rem;
+   width: max-content;
+   color: var(--white);
+}
+
+.nav-header {
+   position: absolute;
+   top: 100%;
+   left: -110%;
+   height: 100vw;
+   width: 100vw;
+   background-color: var(--blue);
+}
+
+.nav-header.show {
+   animation: show 1s forwards;
+}
+
+.nav-header.hidden {
+   animation: hidden 1s forwards;
+}
+
+.menu-header {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+   margin: auto 0;
+   background-color: var(--blue);
+}
+
+.item-menu-header {
+   text-align: center;
+   padding: 2.5rem 0;
+}
+
+.link-menu-header {
+  color: var(--white);
+  font-size: 2rem;
+  padding: 2.5rem;
+}
+
+/* main */
+#main {
+   grid-area: main;
+
+   grid-template-columns: 100vw;
+}
+
+/* aside-interviews */
+#interviews {
+   grid-area: aside-interviews;
+}
+
+/* aside-form */
+#news {
+   grid-area: aside-form;
+}
+
+/* footer */
+#footer {
+   grid-area: footer;
+}
